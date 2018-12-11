@@ -1,0 +1,42 @@
+{
+    "name": "simpod/graphql-client",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Podlipsky",
+            "email": "simon@podlipsky.net"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "SimPod\\GraphQLClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimPod\\GraphQLClient\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "thecodingmachine/safe": "^0.1.8"
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "^5.0",
+        "phpstan/phpstan": "^0.10.6",
+        "phpstan/phpstan-phpunit": "^0.10.0",
+        "phpstan/phpstan-strict-rules": "^0.10.1",
+        "phpunit/phpunit": "^7.5",
+        "thecodingmachine/phpstan-safe-rule": "^0.1.0"
+    }
+}
