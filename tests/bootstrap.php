@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SimPod\GraphQLClient\Tests;
+namespace SimPod\GraphQLRequestFactory\Tests;
 
 use function date_default_timezone_set;
 use function error_reporting;

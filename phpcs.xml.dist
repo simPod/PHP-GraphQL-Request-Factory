@@ -14,7 +14,6 @@
 
     <rule ref="Doctrine"/>
 
-
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
         <properties>
             <property name="psr12Compatible" type="bool" value="true" />
