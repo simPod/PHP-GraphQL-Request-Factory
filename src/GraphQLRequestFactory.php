@@ -24,23 +24,27 @@ final class GraphQLRequestFactory
     }
 
     /**
+     * Creates POST Request with application/json Content-Type header
+     *
      * @param array<string, mixed> $variables
      */
-    public function createRequest(string $uri, string $query, array $variables = []) : RequestInterface
+    public function createRequest(string $uri, string $query, ?array $variables = null, ?string $operationName = null) : RequestInterface
     {
         $request = $this->requestFactory->createRequest('POST', $uri);
+
+        $body = ['query' => $query];
+        if ($variables !== null) {
+            $body['variables'] = $variables;
+        }
+
+        if ($operationName !== null) {
+            $body['operationName'] = $operationName;
+        }
 
         return $request
             ->withHeader('Content-Type', 'application/json')
             ->withBody(
-                $this->streamFactory->createStream(
-                    json_encode(
-                        [
-                            'query'     => $query,
-                            'variables' => $variables,
-                        ]
-                    )
-                )
+                $this->streamFactory->createStream(json_encode($body))
             );
     }
 }
