@@ -47,3 +47,5 @@ GRAPHQL,
     ['id' => 1]
 );
 ```
+
+You can pass `$query` either as a `string` or PSR7 `StreamInterface`.
