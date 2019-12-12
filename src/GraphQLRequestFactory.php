@@ -7,6 +7,8 @@ namespace SimPod\GraphQLRequestFactory;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Http\Message\StreamInterface;
+use function is_string;
 use function Safe\json_encode;
 
 final class GraphQLRequestFactory
@@ -26,13 +28,14 @@ final class GraphQLRequestFactory
     /**
      * Creates POST Request with application/json Content-Type header
      *
-     * @param array<string, mixed> $variables
+     * @param StreamInterface|string $query
+     * @param array<string, mixed>   $variables
      */
-    public function createRequest(string $uri, string $query, ?array $variables = null, ?string $operationName = null) : RequestInterface
+    public function createRequest(string $uri, $query, ?array $variables = null, ?string $operationName = null) : RequestInterface
     {
         $request = $this->requestFactory->createRequest('POST', $uri);
 
-        $body = ['query' => $query];
+        $body = ['query' => is_string($query) ? $query : (string) $query];
         if ($variables !== null) {
             $body['variables'] = $variables;
         }

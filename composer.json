@@ -34,6 +34,7 @@
     },
     "require-dev": {
         "doctrine/coding-standard": "^7.0",
+        "nyholm/psr7": "^1.2",
         "phpstan/phpstan": "0.12.2",
         "phpstan/phpstan-phpunit": "0.12.1",
         "phpstan/phpstan-strict-rules": "0.12.0",
