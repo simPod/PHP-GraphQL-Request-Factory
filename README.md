@@ -43,8 +43,7 @@ query GetHuman($id: ID!) {
     }
   }
 }
-GRAPHQL
-    ,
+GRAPHQL,
     ['id' => 1]
 );
 ```
