@@ -48,4 +48,24 @@ GRAPHQL,
 );
 ```
 
-You can pass `$query` either as a `string` or PSR7 `StreamInterface`.
+You can pass `$query` either as a `string` or PSR-7 `StreamInterface`.
+
+### Mkay, but what should I do with the request then?
+
+You can pass it to any HTTP client supporting PSR-7. It's up to you what client you decide to use.
+
+#### Guzzle
+
+http://docs.guzzlephp.org/en/stable/quickstart.html#sending-requests
+
+```php
+$response = $client->send($request);
+```
+
+#### PSR-18 Client (eg. HTTPPlug)
+
+https://www.php-fig.org/psr/psr-18/#clientinterface
+
+```php
+$response = $client->sendRequest($request);
+```
