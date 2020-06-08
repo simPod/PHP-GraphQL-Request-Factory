@@ -33,7 +33,7 @@
         "thecodingmachine/safe": "^1.0.2"
     },
     "require-dev": {
-        "doctrine/coding-standard": "^7.0",
+        "doctrine/coding-standard": "^8.0",
         "nyholm/psr7": "^1.2",
         "phpunit/phpunit": "^8",
         "psalm/plugin-phpunit": "^0.10.1",

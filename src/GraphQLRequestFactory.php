@@ -8,6 +8,7 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
+
 use function is_string;
 use function Safe\json_encode;
 
@@ -31,7 +32,7 @@ final class GraphQLRequestFactory
      * @param StreamInterface|string $query
      * @param array<string, mixed>   $variables
      */
-    public function createRequest(string $uri, $query, ?array $variables = null, ?string $operationName = null) : RequestInterface
+    public function createRequest(string $uri, $query, ?array $variables = null, ?string $operationName = null): RequestInterface
     {
         $request = $this->requestFactory->createRequest('POST', $uri);
 

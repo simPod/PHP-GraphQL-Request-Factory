@@ -15,7 +15,7 @@ final class GraphQLRequestFactoryTest extends TestCase
      *
      * @dataProvider provideCreateRequestIsValid
      */
-    public function testCreateRequestIsValid(string $expectedQuery, array $arguments) : void
+    public function testCreateRequestIsValid(string $expectedQuery, array $arguments): void
     {
         $psr17Factory          = new Psr17Factory();
         $graphQLRequestFactory = new GraphQLRequestFactory($psr17Factory, $psr17Factory);
@@ -36,7 +36,7 @@ final class GraphQLRequestFactoryTest extends TestCase
     /**
      * @return iterable<string, array<mixed>>
      */
-    public function provideCreateRequestIsValid() : iterable
+    public function provideCreateRequestIsValid(): iterable
     {
         yield 'query' => [
             <<<JSON
