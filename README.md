@@ -1,11 +1,9 @@
 # PHP GraphQL Request Factory
 
-[![Build Status](https://travis-ci.com/simPod/GraphQL-Request-Factory.svg?branch=master)](https://travis-ci.com/simPod/GraphQL-Request-Factory)
+[![Build Status](https://github.com/simPod/PHP-GraphQL-Request-Factory/workflows/CI/badge.svg?branch=master)](https://github.com/simPod/PHP-GraphQL-Request-Factory/actions)
+[![Coverage Status](https://coveralls.io/repos/github/simPod/PHP-GraphQL-Request-Factory/badge.svg?branch=master)](https://coveralls.io/github/simPod/PHP-GraphQL-Request-Factory?branch=master)
 [![Downloads](https://poser.pugx.org/simpod/graphql-request-factory/d/total.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
 [![Packagist](https://poser.pugx.org/simpod/graphql-request-factory/v/stable.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
-[![Licence](https://poser.pugx.org/simpod/graphql-request-factory/license.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
-[![Quality Score](https://scrutinizer-ci.com/g/simPod/GraphQL-Request-Factory/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/simPod/GraphQL-Request-Factory)
-[![Code Coverage](https://scrutinizer-ci.com/g/simPod/GraphQL-Request-Factory/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/simPod/GraphQL-Request-Factory)
 
 This factory creates PSR-7 GraphQL Request through PSR-17 message factories
 that you can be passed to PSR-18 client. 
