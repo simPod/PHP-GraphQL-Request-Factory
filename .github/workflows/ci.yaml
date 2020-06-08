@@ -9,8 +9,8 @@ on:
     - cron: "0 17 * * *"
 
 jobs:
-  phpstan:
-    name: PHPStan
+  psalm:
+    name: Psalm
     runs-on: ubuntu-20.04
     strategy:
       matrix:
@@ -34,9 +34,9 @@ jobs:
       -   name: Install dependencies with composer
           run: COMPOSER_ARGS="--prefer-stable" make
 
-      -   name: Run a static analysis with phpstan/phpstan
+      -   name: Run a static analysis with vimeo/psalm
           env:
-            PHPSTAN_ARGS: --error-format=checkstyle
+            PSALM_ARGS: --output-format=checkstyle
           run: make -is static-analysis | cs2pr
 
   coding-standards:

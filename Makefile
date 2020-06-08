@@ -24,7 +24,7 @@ fix:
 
 .PHONY: static-analysis
 static-analysis:
-	vendor/bin/phpstan analyse $(PHPSTAN_ARGS)
+	vendor/bin/psalm $(PSALM_ARGS)
 
 .PHONY: check
 check: build cs static-analysis test
