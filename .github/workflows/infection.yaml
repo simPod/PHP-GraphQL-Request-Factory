@@ -1,0 +1,31 @@
+name: Infection
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  Infection:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+          coverage: pcov
+          extensions: json
+
+      - name: Install Dependencies
+        run: |
+          composer install --prefer-dist --no-progress --no-suggest
+          composer require --dev infection/infection
+
+      - name: Run Infection
+        run: vendor/bin/infection --min-msi=90 --min-covered-msi=90 --log-verbosity=none -s
+        env:
+          INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
