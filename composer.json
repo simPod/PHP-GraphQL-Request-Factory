@@ -35,11 +35,9 @@
     "require-dev": {
         "doctrine/coding-standard": "^7.0",
         "nyholm/psr7": "^1.2",
-        "phpstan/phpstan": "0.12.2",
-        "phpstan/phpstan-phpunit": "0.12.1",
-        "phpstan/phpstan-strict-rules": "0.12.0",
         "phpunit/phpunit": "^8",
+        "psalm/plugin-phpunit": "^0.10.1",
         "simpod/php-coveralls-mirror": "^3.0",
-        "thecodingmachine/phpstan-safe-rule": "^1.0"
+        "vimeo/psalm": "^3.11"
     }
 }

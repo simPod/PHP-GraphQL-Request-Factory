@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/simPod/PHP-GraphQL-Request-Factory/badge.svg?branch=master)](https://coveralls.io/github/simPod/PHP-GraphQL-Request-Factory?branch=master)
 [![Downloads](https://poser.pugx.org/simpod/graphql-request-factory/d/total.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
 [![Packagist](https://poser.pugx.org/simpod/graphql-request-factory/v/stable.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
+[![Type Coverage](https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory/coverage.svg)](https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory)
 
 This factory creates PSR-7 GraphQL Request through PSR-17 message factories
 that you can be passed to PSR-18 client. 
