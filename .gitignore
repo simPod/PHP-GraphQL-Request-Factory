@@ -6,3 +6,6 @@
 /vendor
 /infection.json
 /infection-log.txt
+.phpunit.result.cache
+/infection.json
+/infection-log.txt
