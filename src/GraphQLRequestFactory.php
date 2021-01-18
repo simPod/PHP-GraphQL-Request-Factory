@@ -14,11 +14,9 @@ use function Safe\json_encode;
 
 final class GraphQLRequestFactory
 {
-    /** @var RequestFactoryInterface */
-    private $requestFactory;
+    private RequestFactoryInterface $requestFactory;
 
-    /** @var StreamFactoryInterface */
-    private $streamFactory;
+    private StreamFactoryInterface $streamFactory;
 
     public function __construct(RequestFactoryInterface $requestFactory, StreamFactoryInterface $streamFactory)
     {
