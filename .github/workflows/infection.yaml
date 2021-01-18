@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
+      - name: "Checkout"
+        uses: "actions/checkout@v2"
         with:
-          php-version: 7.3
-          coverage: pcov
-          extensions: json
+          fetch-depth: 2
 
-      - name: Install Dependencies
-        run: |
-          composer install --prefer-dist --no-progress --no-suggest
-          composer require --dev infection/infection
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: 7.4
+          coverage: "pcov"
+
+      - name: "Install dependencies with Composer"
+        uses: "ramsey/composer-install@v1"
 
       - name: Run Infection
         run: vendor/bin/infection --min-msi=90 --min-covered-msi=90 --log-verbosity=none -s

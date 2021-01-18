@@ -1,11 +1,11 @@
 # PHP GraphQL Request Factory
 
-[![Build Status](https://github.com/simPod/PHP-GraphQL-Request-Factory/workflows/CI/badge.svg?branch=master)](https://github.com/simPod/PHP-GraphQL-Request-Factory/actions)
-[![Coverage Status](https://coveralls.io/repos/github/simPod/PHP-GraphQL-Request-Factory/badge.svg?branch=master)](https://coveralls.io/github/simPod/PHP-GraphQL-Request-Factory?branch=master)
-[![Downloads](https://poser.pugx.org/simpod/graphql-request-factory/d/total.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
-[![Packagist](https://poser.pugx.org/simpod/graphql-request-factory/v/stable.svg)](https://packagist.org/packages/simpod/graphql-request-factory)
-[![Type Coverage](https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory/coverage.svg)](https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory)
-[![Infection MSI](https://badge.stryker-mutator.io/github.com/simPod/PHP-GraphQL-Request-Factory/master)](https://infection.github.io)
+[![GitHub Actions][GA Image]][GA Link]
+[![Shepherd Type][Shepherd Image]][Shepherd Link]
+[![Code Coverage][Coverage Image]][CodeCov Link]
+[![Downloads][Downloads Image]][Packagist Link]
+[![Packagist][Packagist Image]][Packagist Link]
+[![Infection MSI][Infection Image]][Infection Link]
 
 This factory creates PSR-7 GraphQL Request through PSR-17 message factories
 that you can be passed to PSR-18 client. 
@@ -69,3 +69,15 @@ https://www.php-fig.org/psr/psr-18/#clientinterface
 ```php
 $response = $client->sendRequest($request);
 ```
+
+[GA Image]: https://github.com/simPod/PHP-GraphQL-Request-Factory/workflows/Continuous%20Integration/badge.svg
+[GA Link]: https://github.com/simPod/PHP-GraphQL-Request-Factory/actions?query=workflow%3A%22Continuous+Integration%22+branch%3Amaster
+[Shepherd Image]: https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory/coverage.svg
+[Shepherd Link]: https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory
+[Coverage Image]: https://codecov.io/gh/simPod/PHP-GraphQL-Request-Factory/branch/master/graph/badge.svg
+[CodeCov Link]: https://codecov.io/gh/simPod/PHP-GraphQL-Request-Factory/branch/master
+[Downloads Image]: https://poser.pugx.org/simpod/graphql-request-factory/d/total.svg
+[Packagist Image]: https://poser.pugx.org/simpod/graphql-request-factory/v/stable.svg
+[Packagist Link]: https://packagist.org/packages/simpod/graphql-request-factory
+[Infection Image]: https://badge.stryker-mutator.io/github.com/simPod/PHP-GraphQL-Request-Factory/master
+[Infection Link]: https://infection.github.io
