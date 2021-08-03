@@ -1,3 +1,8 @@
+⚠️ Abandoned in favor of [spawnia/sailor](https://github.com/spawnia/sailor) 
+(since [this PR introduces PSR-18 support](https://github.com/spawnia/sailor/issues/27) in v0.9.0).
+
+--------------
+
 # PHP GraphQL Request Factory
 
 [![GitHub Actions][GA Image]][GA Link]
