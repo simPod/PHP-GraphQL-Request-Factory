@@ -10,6 +10,11 @@
         }
     ],
     "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        },
         "optimize-autoloader": true,
         "preferred-install": {
             "*": "dist"
