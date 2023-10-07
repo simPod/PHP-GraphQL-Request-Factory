@@ -11,7 +11,7 @@ use SimPod\GraphQLRequestFactory\GraphQLRequestFactory;
 final class GraphQLRequestFactoryTest extends TestCase
 {
     /**
-     * @param array<mixed> $arguments
+     * @param array{string} $arguments
      *
      * @dataProvider provideCreateRequestIsValid
      */
