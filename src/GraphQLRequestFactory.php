@@ -14,24 +14,23 @@ use function Safe\json_encode;
 
 final class GraphQLRequestFactory
 {
-    private RequestFactoryInterface $requestFactory;
-
-    private StreamFactoryInterface $streamFactory;
-
-    public function __construct(RequestFactoryInterface $requestFactory, StreamFactoryInterface $streamFactory)
-    {
-        $this->requestFactory = $requestFactory;
-        $this->streamFactory  = $streamFactory;
+    public function __construct(
+        private RequestFactoryInterface $requestFactory,
+        private StreamFactoryInterface $streamFactory,
+    ) {
     }
 
     /**
      * Creates POST Request with application/json Content-Type header
      *
-     * @param StreamInterface|string $query
-     * @param array<string, mixed>   $variables
+     * @param array<string, mixed> $variables
      */
-    public function createRequest(string $uri, $query, ?array $variables = null, ?string $operationName = null): RequestInterface
-    {
+    public function createRequest(
+        string $uri,
+        StreamInterface|string $query,
+        array|null $variables = null,
+        string|null $operationName = null,
+    ): RequestInterface {
         $request = $this->requestFactory->createRequest('POST', $uri);
 
         $body = ['query' => is_string($query) ? $query : (string) $query];
@@ -46,7 +45,7 @@ final class GraphQLRequestFactory
         return $request
             ->withHeader('Content-Type', 'application/json')
             ->withBody(
-                $this->streamFactory->createStream(json_encode($body))
+                $this->streamFactory->createStream(json_encode($body)),
             );
     }
 }
