@@ -24,22 +24,20 @@ final class GraphQLRequestFactoryTest extends TestCase
 
         self::assertJsonStringEqualsJsonString(
             $expectedQuery,
-            (string) $request->getBody()
+            $request->getBody()->__toString(),
         );
 
         self::assertSame(
             'application/json',
-            $request->getHeader('Content-Type')[0]
+            $request->getHeader('Content-Type')[0],
         );
     }
 
-    /**
-     * @return iterable<string, array<mixed>>
-     */
+    /** @return iterable<string, array<mixed>> */
     public function provideCreateRequestIsValid(): iterable
     {
         yield 'query' => [
-            <<<JSON
+            <<<'JSON'
 {
     "query": "graphql query"
 }
@@ -49,7 +47,7 @@ JSON
         ];
 
         yield 'query with variables' => [
-            <<<JSON
+            <<<'JSON'
 {
     "query": "graphql query",
     "variables": {"key": "value"}
@@ -60,7 +58,7 @@ JSON
         ];
 
         yield 'query with variables and operation name' => [
-            <<<JSON
+            <<<'JSON'
 {
     "query": "graphql query",
     "variables": {"key": "value"},
@@ -72,7 +70,7 @@ JSON
         ];
 
         yield 'query as Stream' => [
-            <<<JSON
+            <<<'JSON'
 {
     "query": "graphql query"
 }
