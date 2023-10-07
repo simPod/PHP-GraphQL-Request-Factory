@@ -34,7 +34,7 @@ final class GraphQLRequestFactoryTest extends TestCase
     }
 
     /** @return iterable<string, array<mixed>> */
-    public function provideCreateRequestIsValid(): iterable
+    public static function provideCreateRequestIsValid(): iterable
     {
         yield 'query' => [
             <<<'JSON'
