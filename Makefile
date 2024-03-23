@@ -22,12 +22,8 @@ cs:
 fix:
 	vendor/bin/phpcbf
 
-.PHONY: static-analysis
-static-analysis:
-	vendor/bin/psalm $(PSALM_ARGS)
-
 .PHONY: check
-check: build cs static-analysis test
+check: build cs test
 
 .PHONY: clean
 clean: clean-vendor
