@@ -1,7 +1,6 @@
 # PHP GraphQL Request Factory
 
 [![GitHub Actions][GA Image]][GA Link]
-[![Shepherd Type][Shepherd Image]][Shepherd Link]
 [![Code Coverage][Coverage Image]][CodeCov Link]
 [![Downloads][Downloads Image]][Packagist Link]
 [![Packagist][Packagist Image]][Packagist Link]
@@ -72,8 +71,6 @@ $response = $client->sendRequest($request);
 
 [GA Image]: https://github.com/simPod/PHP-GraphQL-Request-Factory/workflows/Continuous%20Integration/badge.svg
 [GA Link]: https://github.com/simPod/PHP-GraphQL-Request-Factory/actions?query=workflow%3A%22Continuous+Integration%22+branch%3Amaster
-[Shepherd Image]: https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory/coverage.svg
-[Shepherd Link]: https://shepherd.dev/github/simPod/PHP-GraphQL-Request-Factory
 [Coverage Image]: https://codecov.io/gh/simPod/PHP-GraphQL-Request-Factory/branch/master/graph/badge.svg
 [CodeCov Link]: https://codecov.io/gh/simPod/PHP-GraphQL-Request-Factory/branch/master
 [Downloads Image]: https://poser.pugx.org/simpod/graphql-request-factory/d/total.svg
