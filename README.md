@@ -76,5 +76,5 @@ $response = $client->sendRequest($request);
 [Downloads Image]: https://poser.pugx.org/simpod/graphql-request-factory/d/total.svg
 [Packagist Image]: https://poser.pugx.org/simpod/graphql-request-factory/v/stable.svg
 [Packagist Link]: https://packagist.org/packages/simpod/graphql-request-factory
-[Infection Image]: https://badge.stryker-mutator.io/github.com/simPod/PHP-GraphQL-Request-Factory/master
+[Infection Image]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FsimPod%2FPHP-GraphQL-Request-Factory%2Fmaster
 [Infection Link]: https://infection.github.io
