@@ -43,9 +43,9 @@
         "infection/infection": "^0.29.0",
         "nyholm/psr7": "^1.2",
         "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan": "^1.0.0",
-        "phpstan/phpstan-phpunit": "^1.0.0",
-        "phpstan/phpstan-strict-rules": "^1.0.0",
+        "phpstan/phpstan": "^2.0.0",
+        "phpstan/phpstan-phpunit": "^2.0.0",
+        "phpstan/phpstan-strict-rules": "^2.0.0",
         "phpunit/phpunit": "^11.4",
         "simpod/php-coveralls-mirror": "^3.0"
     }
