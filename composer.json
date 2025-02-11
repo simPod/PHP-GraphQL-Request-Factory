@@ -36,7 +36,7 @@
         "ext-json": "*",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^1.0 || ^2.0",
-        "thecodingmachine/safe": "^1.0.2 || ^2"
+        "thecodingmachine/safe": "^3"
     },
     "require-dev": {
         "doctrine/coding-standard": "^12.0",
