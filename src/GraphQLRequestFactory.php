@@ -10,7 +10,9 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 use function is_string;
-use function Safe\json_encode;
+use function json_encode;
+
+use const JSON_THROW_ON_ERROR;
 
 final class GraphQLRequestFactory
 {
@@ -45,7 +47,7 @@ final class GraphQLRequestFactory
         return $request
             ->withHeader('Content-Type', 'application/json')
             ->withBody(
-                $this->streamFactory->createStream(json_encode($body)),
+                $this->streamFactory->createStream(json_encode($body, JSON_THROW_ON_ERROR)),
             );
     }
 }
