@@ -5,16 +5,14 @@ declare(strict_types=1);
 namespace SimPod\GraphQLRequestFactory\Tests;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use SimPod\GraphQLRequestFactory\GraphQLRequestFactory;
 
 final class GraphQLRequestFactoryTest extends TestCase
 {
-    /**
-     * @param array{string} $arguments
-     *
-     * @dataProvider provideCreateRequestIsValid
-     */
+    /** @param array{string} $arguments */
+    #[DataProvider('provideCreateRequestIsValid')]
     public function testCreateRequestIsValid(string $expectedQuery, array $arguments): void
     {
         $psr17Factory          = new Psr17Factory();
