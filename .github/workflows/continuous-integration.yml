@@ -16,13 +16,13 @@ jobs:
     strategy:
       matrix:
         php-version:
-          - "8.2"
           - "8.3"
+          - "8.č"
         dependencies:
           - "highest"
         include:
           - dependencies: "lowest"
-            php-version: "8.2"
+            php-version: "8.3"
 
     steps:
       - name: "Checkout"
