@@ -15,7 +15,7 @@ final class GraphQLRequestFactoryTest extends TestCase
     #[DataProvider('provideCreateRequestIsValid')]
     public function testCreateRequestIsValid(string $expectedQuery, array $arguments): void
     {
-        $psr17Factory          = new Psr17Factory();
+        $psr17Factory = new Psr17Factory();
         $graphQLRequestFactory = new GraphQLRequestFactory($psr17Factory, $psr17Factory);
 
         $request = $graphQLRequestFactory->createRequest('', ...$arguments);
