@@ -15,6 +15,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true
         },
+        "lock": false,
         "optimize-autoloader": true,
         "preferred-install": {
             "*": "dist"
