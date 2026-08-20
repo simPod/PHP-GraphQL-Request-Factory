@@ -74,7 +74,7 @@ JSON
 }
 JSON
 ,
-            [(new Psr17Factory())->createStream('graphql query')],
+            [new Psr17Factory()->createStream('graphql query')],
         ];
     }
 }
